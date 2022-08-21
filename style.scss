@@ -1,0 +1,181 @@
+  @font-face {
+    font-family: 'TT Lakes';
+    src: url("fonts/TTLakes-Regular.woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Medium.woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Bold.woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a,
+  button {
+    cursor: pointer;
+  }
+  
+  body {
+    font-family: "TT Lakes", "Arial", sans-serif;
+    font-size: 16px;
+    background-color: #F8F8F8;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  button,
+  p,
+  ul,
+  li,
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .text-wrapper {
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    border-top: 1px solid #D9FFF5;
+    padding: 16px 0;
+    margin: 0 0 16px 16px;
+  }
+
+  .repair-brands {
+    text-transform: uppercase;
+    color: #7E7E82;
+    
+  }
+  .swiper{
+    min-height: 200px;
+  }
+
+  .swiper-wrapper{
+      display: flex;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 240px;
+    max-height: 72px;
+    border: 2px #EAEAEA !important; 
+    border-radius: 10px;
+    padding: 16px;
+    background-color: #FFFFFF;
+  }
+  .swiper-slide:nth-child(6) .brand-logo {
+    max-height: 44px;
+  }  
+
+
+  .swiper-slide__button {
+    border: 2px solid #FF3E79;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: auto;
+    background: no-repeat center center 
+    url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.5 6L0.707106 2.20711C0.316582 1.81658 0.316582 1.18342 0.707107 0.792893L0.792893 0.707107C1.18342 0.316583 1.81658 0.316583 2.20711 0.707107L6.79289 5.29289C7.18342 5.68342 7.18342 6.31658 6.79289 6.70711L2.20711 11.2929C1.81658 11.6834 1.18342 11.6834 0.792893 11.2929L0.707107 11.2071C0.316583 10.8166 0.316583 10.1834 0.707107 9.79289L4.5 6Z' fill='%23FF3E79'/%3E%3C/svg%3E");
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets, 
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom, .swiper-pagination-fraction {
+    top: 80px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #979797 !important;
+}
+  .text-wrapper::after {
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 15px;
+    background: linear-gradient(270deg,
+    #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    top: 67px;
+    right: -1px;
+    z-index: 10;
+  }
+  .read-next {
+    display: none;
+  }
+  
+  
+ 
+@media (min-width: 768px) {
+  .swiper-pagination{
+    display: none;
+  }
+  .slider{
+    margin-left: 24px;
+  }
+
+  .swiper-wrapper {
+    display: flex; 
+    flex-wrap: wrap;
+    
+    
+  }
+  .swiper-slide{
+    //margin: 8px;
+    max-width: 224px;
+    margin:24px 16px 0 24px;
+  }
+  .hidden {
+    display: none;
+  }
+ 
+  .swiper-slide:nth-child(6) .brand-logo {
+    max-height: 44px;
+  }
+  .read-next {
+    display: flex;
+    border: none;
+    background-color: transparent;
+    margin-left: 48px;
+  }
+  .button-text {
+    position: relative;
+    font-family: "TT Lakes", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 24px;
+  }
+  .button-text::before {
+    content: '';
+    position: absolute;
+    background: no-repeat center url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3E%3C/svg%3E");
+    width: 16px;
+    height:16px;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    left:-23px;
+  }
+  .button-text.button-text__hide--clicked::before {
+    
+      transform: rotateX(180deg);
+      top:20%;
+  }
+}
