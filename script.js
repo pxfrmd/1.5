@@ -1,33 +1,60 @@
-const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  slidesPerView: 'auto',
-  spaceBetween: 16,
-  autoheight: false,
-  loop:false,
-  feeMode:false,
-  centeredSlides:true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  breakpoints:{
-    768: {
-      centeredSlides:false
-    }
-  }
-});
-
+let init = false;
 let swiperMode = () => {
-if (window.matchMedia('(min-width: 768px)').matches) {
-  swiper.disable();
-} else if (window.matchMedia('(max-width: 768px)').matches) {
-  swiper.enable();
-}}
-
+  if (window.innerWidth <= 768) {
+    if (!init) {
+      init = true;
+      const swiper = new Swiper('.swiper', {
+          direction: 'horizontal',
+          slidesPerView: 'auto',
+          spaceBetween: 16,
+          autoheight: false,
+          loop:false,
+          feeMode:false,
+          centeredSlides:true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          breakpoints:{
+            768: {
+              centeredSlides:false
+            }
+          }
+        });
+    }
+  } else if (init) {
+    swiper.destroy();
+    init = false;
+  }
+}
 swiperMode();
+window.addEventListener("resize", swiperMode);
+// if (window.matchMedia('(max-width: 768px)').matches){
+// const swiper = new Swiper('.swiper', {
+//   direction: 'horizontal',
+//   slidesPerView: 'auto',
+//   spaceBetween: 16,
+//   autoheight: false,
+//   loop:false,
+//   feeMode:false,
+//   centeredSlides:true,
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+//   breakpoints:{
+//     768: {
+//       centeredSlides:false
+//     }
+//   }
+// });}
 
-window.addEventListener('resize', () => {
-  swiperMode();
-});
+// let swiperMode = () => {
+// if (window.matchMedia('(min-width: 768px)').matches) {
+//   swiper.disable();
+// } else if (window.matchMedia('(max-width: 768px)').matches) {
+//   swiper.enable();
+// }}
+
+//window.addEventListener('resize', swiperMode());
 
 
 let readNextBtnBrands = document.querySelectorAll('.read-next');
